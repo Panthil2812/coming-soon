@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coming Soon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -14,172 +13,159 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e52d27, #b31217);
-      color: white;
+      background: #fff;
+      color: #0f172a;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
+      min-height: 100vh;
     }
 
     .container {
-      background: #b31217;
-      padding: 40px 20px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      max-width: 500px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .left img {
       width: 100%;
+      max-width: 400px;
+    }
+
+    .right {
+      flex: 1;
+      min-width: 300px;
+      padding: 1rem;
     }
 
     h1 {
-      font-family: 'Anton', sans-serif;
       font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #fff;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 0.9rem;
-      margin-bottom: 30px;
-      color: #eee;
-      letter-spacing: 2px;
+      color: #555;
+      margin-bottom: 2rem;
+      max-width: 500px;
     }
 
     .countdown {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-      gap: 10px;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
     }
 
-    .box {
-      background: white;
-      color: #111;
-      padding: 15px;
-      flex: 1 1 100px;
-      border-radius: 8px;
+    .countdown div {
+      text-align: center;
     }
 
-    .box h2 {
-      font-size: 1.8rem;
-      margin-bottom: 5px;
-    }
-
-    .box span {
-      font-size: 0.75rem;
-      color: #555;
-      text-transform: uppercase;
+    .countdown span {
+      display: block;
+      font-size: 2rem;
       font-weight: bold;
+      color: #0f172a;
     }
 
-    .email-box {
+    .email-form {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      max-width: 400px;
     }
 
-    .email-box input {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      width: 100%;
-      max-width: 300px;
+    .email-form input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
     }
 
-    .email-box button {
-      padding: 10px 20px;
-      background-color: orange;
-      border: none;
-      border-radius: 5px;
+    .email-form button {
+      background: #10b981;
       color: white;
+      padding: 0 1rem;
+      border: none;
+      border-radius: 0 4px 4px 0;
       cursor: pointer;
       font-weight: bold;
     }
 
-    .footer {
-      margin-top: 30px;
-      font-size: 0.7rem;
-      color: #ccc;
-    }
-
-    @media (max-width: 500px) {
-      .countdown {
+    @media (max-width: 768px) {
+      .container {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
       }
 
-      .box {
-        width: 100%;
-        max-width: 250px;
+      .email-form {
+        flex-direction: column;
+      }
+
+      .email-form input,
+      .email-form button {
+        border-radius: 4px;
+        margin-top: 0.5rem;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h1>CLOCK COMING SOON</h1>
-    <p>Be ready, we are launching soon.</p>
-
-    <div class="countdown">
-      <div class="box">
-        <h2 id="days">000</h2>
-        <span>Days</span>
-      </div>
-      <div class="box">
-        <h2 id="hours">00</h2>
-        <span>Hours</span>
-      </div>
-      <div class="box">
-        <h2 id="minutes">00</h2>
-        <span>Minutes</span>
-      </div>
-      <div class="box">
-        <h2 id="seconds">00</h2>
-        <span>Seconds</span>
-      </div>
+    <div class="left">
+      <!-- Placeholder SVG/Illustration -->
+      <img src="https://dummyimage.com/400x300/eeeeee/aaa" alt="Illustration" />
     </div>
+    <div class="right">
+      <h1>Coming Soon</h1>
+      <p>The and greater, all hasn't revisit general up by her. The soon my himself including it those from everything you necessary will didn't little.</p>
 
-    <div class="email-box">
-      <input type="email" placeholder="Please enter your email..." />
-      <button>Subscribe</button>
-    </div>
+      <div class="countdown" id="countdown">
+        <div><span id="days">00</span>Days</div>
+        <div><span id="hours">00</span>Hours</div>
+        <div><span id="minutes">00</span>Minutes</div>
+        <div><span id="seconds">00</span>Seconds</div>
+      </div>
 
-    <div class="footer">
-      © 2025 CLOCK COMING SOON. All rights reserved | Design by You.
+      <div class="email-form">
+        <input type="email" placeholder="Enter Mail Address" />
+        <button>Add Waiting List</button>
+      </div>
     </div>
   </div>
 
   <script>
-    const launchDate = new Date("December 31, 2025 00:00:00").getTime();
+    // Set target launch date
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 30); // 30 days from now
 
-    const timer = setInterval(() => {
+    const countdown = () => {
       const now = new Date().getTime();
-      const gap = launchDate - now;
+      const distance = launchDate - now;
 
-      const second = 1000;
-      const minute = second * 60;
-      const hour = minute * 60;
-      const day = hour * 24;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      const d = Math.floor(gap / day);
-      const h = Math.floor((gap % day) / hour);
-      const m = Math.floor((gap % hour) / minute);
-      const s = Math.floor((gap % minute) / second);
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    };
 
-      document.getElementById("days").innerText = d;
-      document.getElementById("hours").innerText = h < 10 ? '0' + h : h;
-      document.getElementById("minutes").innerText = m < 10 ? '0' + m : m;
-      document.getElementById("seconds").innerText = s < 10 ? '0' + s : s;
-
-      if (gap <= 0) {
-        clearInterval(timer);
-        document.querySelector(".countdown").innerHTML = "<h2>We're Live!</h2>";
-      }
-    }, 1000);
+    setInterval(countdown, 1000);
+    countdown();
   </script>
 </body>
 </html>
